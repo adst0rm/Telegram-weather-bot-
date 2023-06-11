@@ -9,7 +9,7 @@ dp = Dispatcher(bot)
 
 
 #echo
-client = python_weather.Client(format=python_weather.IMPERIAL)
+client = python_weather.Client(unit=python_weather.IMPERIAL)
 @dp.message_handler()
 async def echo (message: types.Message):
 	weather = await client.get(message.text)
